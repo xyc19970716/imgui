@@ -158,7 +158,7 @@ namespace
 
         LoadFlags = 0;
         if (UserFlags & ImGuiFreeTypeBuilderFlags_Bitmap)
-            LoadFlags |= ~FT_LOAD_NO_BITMAP;
+            LoadFlags &= ~FT_LOAD_NO_BITMAP;
 
         if (UserFlags & ImGuiFreeTypeBuilderFlags_NoHinting)
             LoadFlags |= FT_LOAD_NO_HINTING;
