@@ -157,7 +157,7 @@ namespace
         UserFlags = cfg.FontBuilderFlags | extra_font_builder_flags;
 
         LoadFlags = 0;
-        if ((UserFlags & ImGuiFreeTypeBuilderFlags_Bitmap) == 0)
+        if (UserFlags & ImGuiFreeTypeBuilderFlags_Bitmap)
             LoadFlags |= FT_LOAD_NO_BITMAP;
 
         if (UserFlags & ImGuiFreeTypeBuilderFlags_NoHinting)
